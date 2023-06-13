@@ -18,7 +18,7 @@ import com.example.rick_and_morty.feature_characters.domain.models.DomainResult
 fun CharacterItem(item: DomainResult) {
     Card(elevation = 4.dp,
     modifier = Modifier
-        .padding(8.dp,0.dp,8.dp, 8.dp)
+        .padding(8.dp,0.dp,8.dp, 16.dp)
         .clip(RoundedCornerShape(25))) {
         Column(
             horizontalAlignment = Alignment.CenterHorizontally
