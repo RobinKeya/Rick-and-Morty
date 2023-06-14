@@ -10,6 +10,6 @@ interface CharacterApiService {
     @GET("character/")
     suspend fun getCharacters(@Query("id")page: Int):CharacterInfoDto
 
-    @GET("character/id/")
+    @GET("character/{id}")
     suspend fun getCharacter(@Path("id")id: Int): Result
 }

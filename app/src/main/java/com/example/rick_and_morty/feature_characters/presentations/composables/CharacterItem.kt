@@ -1,5 +1,6 @@
 package com.example.rick_and_morty.feature_characters.presentations.composables
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
@@ -15,11 +16,12 @@ import coil.compose.AsyncImage
 import com.example.rick_and_morty.feature_characters.domain.models.DomainResult
 
 @Composable
-fun CharacterItem(item: DomainResult) {
+fun CharacterItem(item: DomainResult, onCardClick : (id: Int)->Unit) {
     Card(elevation = 4.dp,
     modifier = Modifier
         .padding(8.dp,0.dp,8.dp, 16.dp)
-        .clip(RoundedCornerShape(25))) {
+        .clip(RoundedCornerShape(25))
+        .clickable { onCardClick(item.id) }) {
         Column(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {

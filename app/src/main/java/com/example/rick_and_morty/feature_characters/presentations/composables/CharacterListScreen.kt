@@ -23,7 +23,10 @@ import com.example.rick_and_morty.feature_characters.presentations.characterList
 
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
-fun CharacterListScreen(screenState: CharacterListScreenState) {
+fun CharacterListScreen(
+    screenState: CharacterListScreenState,
+    onCardClick: (id: Int)->Unit
+    ) {
     val scaffoldState = rememberScaffoldState()
     Scaffold(scaffoldState = scaffoldState, topBar = { ListTopAppBar()}) {
         LazyColumn(
@@ -60,7 +63,9 @@ fun CharacterListScreen(screenState: CharacterListScreenState) {
             item(){
                 LazyRow(contentPadding = PaddingValues(4.dp)){
                     items(screenState.charList){
-                        CharacterItem(item = it)
+                        CharacterItem(item = it){id ->
+                            onCardClick(id)
+                        }
                     }
                 }
             }
