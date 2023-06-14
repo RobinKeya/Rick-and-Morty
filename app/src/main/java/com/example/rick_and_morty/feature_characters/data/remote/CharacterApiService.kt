@@ -8,7 +8,7 @@ import retrofit2.http.Query
 
 interface CharacterApiService {
     @GET("character/")
-    suspend fun getCharacters(@Query("id")page: Int):CharacterInfoDto
+    suspend fun getCharacters():CharacterInfoDto
 
     @GET("character/{id}")
     suspend fun getCharacter(@Path("id")id: Int): Result

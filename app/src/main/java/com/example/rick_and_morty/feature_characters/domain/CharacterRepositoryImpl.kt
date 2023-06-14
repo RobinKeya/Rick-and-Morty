@@ -14,9 +14,9 @@ class CharacterRepositoryImpl @Inject constructor(
     @IODispatcher private val dispatcher: CoroutineDispatcher,
     private val characterApiService: CharacterApiService
 ): CharacterRepository {
-    override suspend fun getCharacters(page: Int): List<Result> {
+    override suspend fun getCharacters(): List<Result> {
         return withContext(dispatcher) {
-            return@withContext characterApiService.getCharacters(page = page).results
+            return@withContext characterApiService.getCharacters().results
         }
     }
 

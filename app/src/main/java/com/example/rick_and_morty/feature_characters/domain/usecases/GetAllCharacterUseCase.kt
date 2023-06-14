@@ -10,9 +10,9 @@ class GetAllCharacterUseCase @Inject constructor(
     private val repository: CharacterRepository,
     @IODispatcher private val dispatcher: CoroutineDispatcher
 ) {
-    suspend operator fun invoke(page: Int): List<DomainResult> {
+    suspend operator fun invoke(): List<DomainResult> {
         return withContext(dispatcher) {
-            return@withContext repository.getCharacters(page).map {
+            return@withContext repository.getCharacters().map {
                 DomainResult(
                     episode = it.episode,
                     gender = it.gender,

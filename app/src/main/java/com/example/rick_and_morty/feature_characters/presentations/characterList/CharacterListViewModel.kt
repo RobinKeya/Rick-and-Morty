@@ -44,6 +44,6 @@ class CharacterListViewModel @Inject constructor(
 
     }
     private suspend fun getCharacters():List<DomainResult>{
-        return getAllCharacterUseCase(2)
+        return getAllCharacterUseCase()
     }
 }
