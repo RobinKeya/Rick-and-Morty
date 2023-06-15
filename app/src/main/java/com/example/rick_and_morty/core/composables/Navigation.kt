@@ -10,6 +10,7 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
+import com.example.rick_and_morty.core.utils.Screens
 import com.example.rick_and_morty.feature_characters.presentations.characterDetails.CharacterDetailViewModel
 import com.example.rick_and_morty.feature_characters.presentations.characterList.CharacterListViewModel
 import com.example.rick_and_morty.feature_characters.presentations.composables.CharacterDetailScreen
@@ -19,14 +20,17 @@ import com.example.rick_and_morty.feature_location.presentations.locationList.co
 
 @Composable
 fun Navigation(navController: NavHostController) {
-    NavHost(navController = navController, startDestination = "home"){
-        composable(route = "home"){
+    NavHost(navController = navController, startDestination = Screens.Splash){
+        composable(route= Screens.Splash){
+            SplashScreen(navController = navController)
+        }
+        composable(route = Screens.Home){
             val vm : CharacterListViewModel = hiltViewModel()
             CharacterListScreen(screenState = vm.state.value){id ->
-                navController.navigate("home/${id}")
+                navController.navigate("${Screens.Home}/${id}")
             }
         }
-        composable(route= "home/{id}",
+        composable(route= "${Screens.Home}/{id}",
         arguments = listOf(navArgument(name = "id"){
             type = NavType.IntType
         })
@@ -34,11 +38,11 @@ fun Navigation(navController: NavHostController) {
             val vm : CharacterDetailViewModel = hiltViewModel()
             CharacterDetailScreen(screenState = vm.state.value)
         }
-        composable(route = "location"){
+        composable(route = Screens.Location){
             val vm : LocationListViewModel = hiltViewModel()
             LocationScreen(screenState = vm.state.value)
         }
-        composable(route = "episodes"){
+        composable(route = Screens.Episodes){
             Box(contentAlignment = Alignment.Center) {
                 Text(text = "To be implemented")
             }

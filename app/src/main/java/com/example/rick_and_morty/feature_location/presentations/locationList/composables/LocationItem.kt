@@ -18,7 +18,7 @@ import com.example.rick_and_morty.feature_location.domain.models.DomainResult
 @Composable
 fun LocationItem(location: DomainResult) {
     Card() {
-        Column(modifier = Modifier.padding(8.dp)) {
+        Column() {
             when(location.type){
                 "Earth"-> {
                     Image(
@@ -27,8 +27,8 @@ fun LocationItem(location: DomainResult) {
                         modifier = Modifier.fillMaxWidth(),
                         contentScale = ContentScale.Crop
                     )
-                    Text(text = location.name, style = MaterialTheme.typography.h2, modifier = Modifier.padding(8.dp))
-                    Text(text = location.type, style = MaterialTheme.typography.h3, modifier = Modifier.padding(8.dp))
+                    Text(text = location.name, style = MaterialTheme.typography.h2, modifier = Modifier.padding(start = 8.dp))
+                    Text(text = location.type, style = MaterialTheme.typography.h3, modifier = Modifier.padding(start = 8.dp))
                 }
                 "Space station"-> {
                     Image(
@@ -37,8 +37,8 @@ fun LocationItem(location: DomainResult) {
                         modifier = Modifier.fillMaxWidth(),
                         contentScale = ContentScale.Crop
                     )
-                    Text(text = location.name, style = MaterialTheme.typography.h2, modifier = Modifier.padding(8.dp))
-                    Text(text = location.type, style = MaterialTheme.typography.h3, modifier = Modifier.padding(8.dp))
+                    Text(text = location.name, style = MaterialTheme.typography.h2, modifier = Modifier.padding(start = 8.dp))
+                    Text(text = location.type, style = MaterialTheme.typography.h3, modifier = Modifier.padding(start = 8.dp))
                 }
                 "Planet"-> {
                     Image(
@@ -47,8 +47,8 @@ fun LocationItem(location: DomainResult) {
                         modifier = Modifier.fillMaxWidth(),
                         contentScale = ContentScale.Crop
                     )
-                    Text(text = location.name, style = MaterialTheme.typography.h2, modifier = Modifier.padding(8.dp))
-                    Text(text = location.type, style = MaterialTheme.typography.h3, modifier = Modifier.padding(8.dp))
+                    Text(text = location.name, style = MaterialTheme.typography.h2, modifier = Modifier.padding(start = 8.dp))
+                    Text(text = location.type, style = MaterialTheme.typography.h3, modifier = Modifier.padding(start = 8.dp))
                 }
                 "Microverse"-> {
                     Image(
@@ -57,8 +57,8 @@ fun LocationItem(location: DomainResult) {
                         modifier = Modifier.fillMaxWidth(),
                         contentScale = ContentScale.Crop
                     )
-                    Text(text = location.name, style = MaterialTheme.typography.h2, modifier = Modifier.padding(8.dp))
-                    Text(text = location.type, style = MaterialTheme.typography.h3, modifier = Modifier.padding(8.dp))
+                    Text(text = location.name, style = MaterialTheme.typography.h2, modifier = Modifier.padding(start = 8.dp))
+                    Text(text = location.type, style = MaterialTheme.typography.h3, modifier = Modifier.padding(start = 8.dp))
                 }
                 "Dream"-> {
                     Image(
@@ -67,8 +67,8 @@ fun LocationItem(location: DomainResult) {
                         modifier = Modifier.fillMaxWidth(),
                         contentScale = ContentScale.Crop
                     )
-                    Text(text = location.name, style = MaterialTheme.typography.h2, modifier = Modifier.padding(8.dp))
-                    Text(text = location.type, style = MaterialTheme.typography.h3, modifier = Modifier.padding(8.dp))
+                    Text(text = location.name, style = MaterialTheme.typography.h2, modifier = Modifier.padding(start = 8.dp))
+                    Text(text = location.type, style = MaterialTheme.typography.h3, modifier = Modifier.padding(start = 8.dp))
                 }
                 else-> {
                     Image(
@@ -77,8 +77,8 @@ fun LocationItem(location: DomainResult) {
                         modifier = Modifier.fillMaxWidth(),
                         contentScale = ContentScale.Crop
                     )
-                    Text(text = location.name, style = MaterialTheme.typography.h2, modifier = Modifier.padding(8.dp))
-                    Text(text = location.type, style = MaterialTheme.typography.h3, modifier = Modifier.padding(8.dp))
+                    Text(text = location.name, style = MaterialTheme.typography.h2, modifier = Modifier.padding(start = 8.dp))
+                    Text(text = location.type, style = MaterialTheme.typography.h3, modifier = Modifier.padding(start = 8.dp))
                 }
             }
         }
