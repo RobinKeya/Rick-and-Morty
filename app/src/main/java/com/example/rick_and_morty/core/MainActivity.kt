@@ -29,7 +29,11 @@ class MainActivity : ComponentActivity() {
                 val scaffoldState = rememberScaffoldState()
                 Scaffold(
                     scaffoldState = scaffoldState,
-                    bottomBar = { if(currentRoute != Screens.Splash){
+                    bottomBar = { if(currentRoute != Screens.Splash &&
+                        currentRoute != Screens.AuthScreen && currentRoute != Screens.LogIn
+                        && currentRoute != Screens.SignUp
+
+                    ){
                         BottomAppBar(
                             items = Constants.items,
                             modifier =Modifier.fillMaxWidth() ,

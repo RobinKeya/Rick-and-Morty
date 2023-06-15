@@ -4,4 +4,14 @@
     <string name="main_characters">Main characters</string>
     <string name="location">Location</string>
     <string name="episodes">Episodes</string>
+    <string name="welcome">Welcome to \nRick and Morty </string>
+    <string name="signup">Signup</string>
+    <string name="login">Login</string>
+    <string name="no_account">No account?</string>
+    <string name="have_account">Have an account?</string>
+    <string name="signup_welcome">Welcome</string>
+    <string name="or_sign_up_with">Or sign up with</string>
+    <string name="email_address">Email address</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm password</string>
 </resources>

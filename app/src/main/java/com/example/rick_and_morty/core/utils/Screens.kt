@@ -7,4 +7,5 @@ object Screens {
     const val Episodes = "episodes"
     const val LogIn = "login"
     const val SignUp= "signup"
+    const val AuthScreen = "auth"
 }

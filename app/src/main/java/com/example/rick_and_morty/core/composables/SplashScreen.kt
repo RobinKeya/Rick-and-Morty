@@ -47,7 +47,7 @@ fun SplashScreen(navController: NavController) {
                 )
             )
             delay(2000)
-            navController.navigate(Screens.Home){
+            navController.navigate(Screens.AuthScreen){
                 popUpTo(Screens.Splash){
                     inclusive = true
                 }

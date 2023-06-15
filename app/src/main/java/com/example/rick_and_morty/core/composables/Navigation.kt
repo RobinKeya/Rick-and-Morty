@@ -11,6 +11,11 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import com.example.rick_and_morty.core.utils.Screens
+import com.example.rick_and_morty.feature_auth.presentation.LoginViewModel
+import com.example.rick_and_morty.feature_auth.presentation.SignUpViewModel
+import com.example.rick_and_morty.feature_auth.presentation.composables.LoginScreen
+import com.example.rick_and_morty.feature_auth.presentation.composables.SelectAuthScreen
+import com.example.rick_and_morty.feature_auth.presentation.composables.SignUpScreen
 import com.example.rick_and_morty.feature_characters.presentations.characterDetails.CharacterDetailViewModel
 import com.example.rick_and_morty.feature_characters.presentations.characterList.CharacterListViewModel
 import com.example.rick_and_morty.feature_characters.presentations.composables.CharacterDetailScreen
@@ -23,6 +28,17 @@ fun Navigation(navController: NavHostController) {
     NavHost(navController = navController, startDestination = Screens.Splash){
         composable(route= Screens.Splash){
             SplashScreen(navController = navController)
+        }
+        composable(route = Screens.AuthScreen){
+            SelectAuthScreen(navController = navController)
+        }
+        composable(route= Screens.LogIn){
+            val vm : LoginViewModel = hiltViewModel()
+            LoginScreen(navController = navController, loginViewModel =vm )
+        }
+        composable(route = Screens.SignUp){
+            val vm :SignUpViewModel = hiltViewModel()
+            SignUpScreen(navController = navController, signUpViewModel = vm)
         }
         composable(route = Screens.Home){
             val vm : CharacterListViewModel = hiltViewModel()

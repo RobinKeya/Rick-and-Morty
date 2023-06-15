@@ -40,6 +40,7 @@ fun CharacterListScreen(
                     contentDescription ="background_image",
                     modifier = Modifier
                         .fillMaxWidth()
+                        .fillMaxWidth(0.45f)
                         .offset(y = -(20).dp),
                     contentScale = ContentScale.Crop
                 )
