@@ -58,10 +58,9 @@ fun SelectAuthScreen(navController: NavController) {
             OutlinedButton(onClick = { navController.navigate(Screens.LogIn) },
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(16.dp)
                     .clip(RoundedCornerShape(25))
-                    .clickable { },
-                border = BorderStroke(1.dp, Color.LightGray),
+                    .padding(16.dp),
+                border = BorderStroke(2.dp, Color.LightGray),
                 colors = ButtonDefaults.outlinedButtonColors(
                     backgroundColor = MaterialTheme.colors.onPrimary,
                     contentColor = Color.Black
