@@ -132,7 +132,7 @@ fun SignUpScreen(navController: NavController,signUpViewModel: SignUpViewModel) 
             ) {
 
                 Button(onClick = { navController.navigate(Screens.Home){
-                    popUpTo(Screens.SignUp){
+                    popUpTo(Screens.Home){
                         inclusive = true
                     }
                 } }

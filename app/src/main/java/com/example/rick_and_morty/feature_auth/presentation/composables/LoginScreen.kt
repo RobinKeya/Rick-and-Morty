@@ -57,7 +57,7 @@ fun LoginScreen(navController: NavController,loginViewModel: LoginViewModel) {
                 )
             }
 
-            Text(text = stringResource(id = R.string.signup),
+            Text(text = stringResource(id = R.string.login),
                 style = MaterialTheme.typography.h1,
                 modifier = Modifier.padding(top = 100.dp, start = 16.dp)
             )
@@ -112,12 +112,12 @@ fun LoginScreen(navController: NavController,loginViewModel: LoginViewModel) {
             ) {
 
                 Button(onClick = { navController.navigate(Screens.Home){
-                    popUpTo(Screens.LogIn){
+                    popUpTo(Screens.Home){
                         inclusive = true
                     }
                 } }
                 ) {
-                    Text(text = stringResource(id = R.string.signup),modifier = Modifier.padding(16.dp))
+                    Text(text = stringResource(id = R.string.login),modifier = Modifier.padding(16.dp))
                 }
             }
 

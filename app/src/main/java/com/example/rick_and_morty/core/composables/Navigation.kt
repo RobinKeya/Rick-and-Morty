@@ -1,9 +1,11 @@
 package com.example.rick_and_morty.core.composables
 
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
@@ -59,7 +61,10 @@ fun Navigation(navController: NavHostController) {
             LocationScreen(screenState = vm.state.value)
         }
         composable(route = Screens.Episodes){
-            Box(contentAlignment = Alignment.Center) {
+            Box(
+                contentAlignment = Alignment.Center,
+                modifier = Modifier.fillMaxSize()
+            ) {
                 Text(text = "To be implemented")
             }
         }

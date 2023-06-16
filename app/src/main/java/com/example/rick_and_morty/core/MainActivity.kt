@@ -34,11 +34,11 @@ class MainActivity : ComponentActivity() {
                         && currentRoute != Screens.SignUp
 
                     ){
-                        BottomAppBar(
+                        com.example.rick_and_morty.core.composables.BottomAppBar(
                             items = Constants.items,
-                            modifier =Modifier.fillMaxWidth() ,
+                            modifier = Modifier.fillMaxWidth(),
                             navController = navController,
-                            onItemClick = {navController.navigate("${it.route}")}
+                            onItemClick = { navController.navigate("${it.route}") }
                         )
                     }}
                 ) {
